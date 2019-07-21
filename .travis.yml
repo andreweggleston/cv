@@ -1,7 +1,7 @@
 sudo: required
 dist: bionic
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive texlive-full texlive-fonts-recommended
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive texlive-fonts-recommended
   texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex lmodern
 script:
 - mkdir _build
