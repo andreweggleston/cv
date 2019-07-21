@@ -10,6 +10,9 @@ script:
 - xelatex -interaction=nonstopmode -halt-on-error -output-directory _build "\def\iscolor{1}
   \input{Resume.tex}"
 - mv _build/Resume.pdf _build/ResumeCOLOR.pdf
+
+after_success:
+  - .travis/push.sh
 deploy:
   provider: releases
   api_key:
