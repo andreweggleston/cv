@@ -12,7 +12,7 @@ script:
 - mv _build/Resume.pdf _build/ResumeCOLOR.pdf
 
 after_success:
-  - .travis/push.sh
+  - sudo .travis/push.sh
 deploy:
   provider: releases
   api_key:
