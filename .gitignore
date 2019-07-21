@@ -1,0 +1,14 @@
+*.def
+*.4ct
+*.4tc
+*.bcf
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.xml
+*.gz
+*.dvi
+*.tmp
+*.xref
