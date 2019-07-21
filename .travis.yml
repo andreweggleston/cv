@@ -11,6 +11,7 @@ script:
 - mv _build/Resume.pdf _build/ResumeCOLOR.pdf
 
 after_success:
+  - git status
   - sh ./t_push.sh
   - ls
   - pwd
