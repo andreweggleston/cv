@@ -12,6 +12,8 @@ script:
 
 after_success:
   - sudo .travis/push.sh
+  - ls
+  - pwd
 deploy:
   provider: releases
   api_key:
