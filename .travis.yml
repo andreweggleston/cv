@@ -11,7 +11,7 @@ script:
 - mv _build/Resume.pdf _build/ResumeCOLOR.pdf
 
 after_success:
-  - sudo t_push.sh
+  - sudo ./t_push.sh
   - ls
   - pwd
 deploy:
