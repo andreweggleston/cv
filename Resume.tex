@@ -11,10 +11,10 @@
 %% version 2003/12/01 or later.
 %%%%%%%%%%%%%%%%%
 
-% !TEX program = xelatex
-
 %% If you need to pass whatever options to xcolor
 \PassOptionsToPackage{dvipsnames}{xcolor}
+
+% !TEX program = xelatex
 
 %% If you are using \orcid or academicons
 %% icons, make sure you have the academicons
@@ -48,17 +48,19 @@
   %  \setmainfont{lato}
 
 % Change the colours if you want to
-\definecolor{HeadingColor}{HTML}{143D5D}%FFE059}
-\definecolor{TitleColor}{HTML}{DE9E36}%FF5964}
-\definecolor{BodyColor}{HTML}{37323E}%2E2E00}
-\definecolor{LinkColor}{HTML}{6D6A75}%143D5D}
-\definecolor{LightBlue}{HTML}{DEB841}%35A7FF}
+\definecolor{Purp}{HTML}{000000}%FFE059}
+\definecolor{SlateGrey}{HTML}{000000}%FF5964}
+\definecolor{LightGrey}{HTML}{2E2E00}
+\definecolor{DarkBlue}{HTML}{000000}%143D5D}
+\definecolor{LightBlue}{HTML}{000000}%35A7FF}
 
-\colorlet{heading}{HeadingColor}
+\colorlet{heading}{Purp}
 \colorlet{heading-line}{LightBlue}
-\colorlet{accent}{LinkColor}
-\colorlet{emphasis}{TitleColor}
-\colorlet{body}{BodyColor}
+\colorlet{accent}{DarkBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+%\input{color.tex} % !!!! If you want color, uncomment this!
 
 % Change the bullets for itemize and rating marker
 % for \cvskill if you want to
@@ -76,7 +78,7 @@
 \personalinfo{%
   % You can add your own with \printinfo{symbol}{detail}
   \email{\href{mailto:egglestonandrew927@gmail.com}{egglestonandrew927@gmail.com}}
-  \phone{(508) 988-5104}
+  \phone{+1 (508) 988-5104}
   \github{\href{https://www.github.com/andreweggleston}{andreweggleston}}
 }
 
@@ -90,34 +92,42 @@
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
 \cvsection[resume-sidebar]{Projects}
-  \cvevent{Senior Assassin}{\href{https://github.com/andreweggleston/GoSeniorAssassin}{github.com/andreweggleston/GoSeniorAssassin}}{}{}
-  A server side application developed to manage players and their assassins. Written in \textbf{Google Go}.
-  The application communicates to the \textbf{GoSeniorAssassinFrontend} using the \textbf{Websocket API}.
+  \cvevent{Death By Dagger}{\href{https://github.com/andreweggleston/DeathByDagger}{github.com/andreweggleston/DeathByDagger}}{}{}
+  A fun game, updated for 2018. Made use of the \textbf{Slack API} to keep players updated on their status in the game.
+  Created using \textbf{Go}, with data hosted on \textbf{PostgreSQL}.
 
   \divider
 
-  \cvevent{Senior Assassin-Frontend}{\href{https://github.com/andreweggleston/GoSeniorAssassinFrontend}{github.com/andreweggleston/GoSeniorAssassinFrontend}}{}{}
-  A web application developed to provide users with a way to interact with their Assassin Profile, hosted on \textbf{GoSeniorAssassin}. 
-  The app was built using \textbf{Node.js}, \textbf{Angular.js}, \textbf{HTML}, and \textbf{CSS}.
-
+  \cvevent{Javascript Raytracing}{\href{https://github.com/andreweggleston/javascript-raytracing}{github.com/andreweggleston/javascript-raytracing}}{}{}
+  A small \textbf{p5.js} example created to demonstrate how raytracing can be used to make a depth effect when rendering images (as long as everything can be described as a straight line).
+  Created during the design process of a two day hackathon.
+  
   \divider
+
+  % \cvevent{Senior Assassin-Frontend}{\href{https://github.com/andreweggleston/GoSeniorAssassinFrontend}{github.com/andreweggleston/GoSeniorAssassinFrontend}}{}{}
+  % A web application developed to provide users with a way to interact with their Assassin Profile, hosted on \textbf{GoSeniorAssassin}. 
+  % The app was built using \textbf{Node.js}, \textbf{Angular.js}, \textbf{HTML}, and \textbf{CSS}.
+
+  % \divider
 
   \cvevent{WHS Planner}{\href{https://github.com/s0urc3d3v3l0pm3nt/whs\_planner}{github.com/s0urc3d3v3l0pm3nt/whs\_planner}}{}{}
   A client application developed to provide students with a simple schedule planner and organizer.
   The application features an intuitive calendar, an automatically updating schedule, and a live news feed.
-  The app was written in \textbf{Java}, using \textbf{JavaFX} as a graphical framework.
+  The app was created using \textbf{Java}, with \textbf{JavaFX} as a graphical framework.
 
 
 \cvsection{Work Experience}
-  \cveventnew{Wayland Public Schools}{Leader in Training}{Responsible for overseeing and teaching students K-8 in the afterschool programs in the area.}{September 2017 - May 2018}{Wayland, MA}
+
+  \cveventnew{Northrop Grumman}{Software Engineer}{Created an employee management database. Gained experience in Java EE, Angular, and SQL.}{June 2019 - August 2019}{Baltimore, MD}
 
   \divider
 
   \cveventnew{The Center for the Arts in Natick}{Audio Engineer}{Responsible for all audio during live shows, featuring guitar, vocals, piano, etc.}{July 2018 - August 2018}{Natick, MA}
 
   \divider
+  
+  \cveventnew{Wayland Public Schools}{Leader in Training}{Responsible for overseeing and teaching students K-8 in the afterschool programs in the area.}{September 2017 - May 2018}{Wayland, MA}
 
-  \cveventnew{Pocket Full of Tales}{Music Leader}{Responsible for teaching students K-8 about music, as well as playing songs during the subsequent shows.}{July 2018 - August 2018}{Natick, MA}
   % \divider
 
 \medskip
