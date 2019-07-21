@@ -5,10 +5,10 @@ before_install:
 script:
 - mkdir _build
 - xelatex -interaction=nonstopmode -halt-on-error -output-directory _build Resume.tex
-- mv _build/Resume.pdf _build/ResumeBLACK.pdf
+- mv _build/Resume.pdf ResumeBLACK.pdf
 - xelatex -interaction=nonstopmode -halt-on-error -output-directory _build "\def\iscolor{1}
   \input{Resume.tex}"
-- mv _build/Resume.pdf _build/ResumeCOLOR.pdf
+- mv _build/Resume.pdf ResumeCOLOR.pdf
 
 after_success:
   - git status
