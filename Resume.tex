@@ -60,7 +60,9 @@
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
-%\input{color.tex} % !!!! If you want color, uncomment this!
+\ifdefined\iscolor
+\input{color.tex} % !!!! If you want color, uncomment this!
+\fi
 
 % Change the bullets for itemize and rating marker
 % for \cvskill if you want to
