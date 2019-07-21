@@ -12,3 +12,4 @@
 *.dvi
 *.tmp
 *.xref
+*.synctex*
