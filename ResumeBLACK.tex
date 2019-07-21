@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.2, 1 February 2017) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+% !TEX program = xelatex
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+\documentclass[10pt,letter,normalphoto]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%%
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to.
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+  % charter, helvet, newcent
+
+  % If using xelatex or lualatex:
+  %  \setmainfont{lato}
+
+% Change the colours if you want to
+\definecolor{Purp}{HTML}{000000}%FFE059}
+\definecolor{SlateGrey}{HTML}{000000}%FF5964}
+\definecolor{LightGrey}{HTML}{2E2E00}
+\definecolor{DarkBlue}{HTML}{000000}%143D5D}
+\definecolor{LightBlue}{HTML}{000000}%35A7FF}
+
+\colorlet{heading}{Purp}
+\colorlet{heading-line}{LightBlue}
+\colorlet{accent}{DarkBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\input{color.tex}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+% \addbibresource{sample.bib}
+
+\begin{document}
+\firstname{Andrew  }
+\lastname{Eggleston}
+\tagline{Software Engineer}
+%\photo{2.8cm}{profile-square}
+\personalinfo{%
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{\href{mailto:egglestonandrew927@gmail.com}{egglestonandrew927@gmail.com}}
+  \phone{+1 (508) 988-5104}
+  \github{\href{https://www.github.com/andreweggleston}{andreweggleston}}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+  \makecvheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[resume-sidebar]{Projects}
+  \cvevent{Death By Dagger}{\href{https://github.com/andreweggleston/DeathByDagger}{github.com/andreweggleston/DeathByDagger}}{}{}
+  A fun game, updated for 2018. Made use of the \textbf{Slack API} to keep players updated on their status in the game.
+  Created using \textbf{Go}, with data hosted on \textbf{PostgreSQL}.
+
+  \divider
+
+  \cvevent{Javascript Raytracing}{\href{https://github.com/andreweggleston/javascript-raytracing}{github.com/andreweggleston/javascript-raytracing}}{}{}
+  A small \textbf{p5.js} example created to demonstrate how raytracing can be used to make a depth effect when rendering images (as long as everything can be described as a straight line).
+  Created during the design process of a two day hackathon.
+  
+  \divider
+
+  % \cvevent{Senior Assassin-Frontend}{\href{https://github.com/andreweggleston/GoSeniorAssassinFrontend}{github.com/andreweggleston/GoSeniorAssassinFrontend}}{}{}
+  % A web application developed to provide users with a way to interact with their Assassin Profile, hosted on \textbf{GoSeniorAssassin}. 
+  % The app was built using \textbf{Node.js}, \textbf{Angular.js}, \textbf{HTML}, and \textbf{CSS}.
+
+  % \divider
+
+  \cvevent{WHS Planner}{\href{https://github.com/s0urc3d3v3l0pm3nt/whs\_planner}{github.com/s0urc3d3v3l0pm3nt/whs\_planner}}{}{}
+  A client application developed to provide students with a simple schedule planner and organizer.
+  The application features an intuitive calendar, an automatically updating schedule, and a live news feed.
+  The app was created using \textbf{Java}, with \textbf{JavaFX} as a graphical framework.
+
+
+\cvsection{Work Experience}
+
+  \cveventnew{Northrop Grumman}{Software Engineer}{Created an employee management database. Gained experience in Java EE, Angular, and SQL.}{June 2019 - August 2019}{Baltimore, MD}
+
+  \divider
+
+  \cveventnew{The Center for the Arts in Natick}{Audio Engineer}{Responsible for all audio during live shows, featuring guitar, vocals, piano, etc.}{July 2018 - August 2018}{Natick, MA}
+
+  \divider
+  
+  \cveventnew{Wayland Public Schools}{Leader in Training}{Responsible for overseeing and teaching students K-8 in the afterschool programs in the area.}{September 2017 - May 2018}{Wayland, MA}
+
+  % \divider
+
+\medskip
+
+\end{document}
