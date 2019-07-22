@@ -19,7 +19,7 @@ upload_files() {
   git push --quiet https://andreweggleston:${GH_TOKEN}@github.com/andreweggleston/cv.git master
 }
 
-function travis-branch-commit() {
+travis-branch-commit() {
     local head_ref branch_ref
     head_ref=$(git rev-parse HEAD)
     if [[ $? -ne 0 || ! $head_ref ]]; then
