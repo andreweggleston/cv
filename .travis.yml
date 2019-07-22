@@ -1,6 +1,6 @@
 sudo: required
 dist: bionic
-branches
+branches:
   except:
     - "/\\+travis\\d+$/"
 
