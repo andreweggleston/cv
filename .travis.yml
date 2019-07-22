@@ -45,6 +45,7 @@ script: # Change working directory each time so including files will work. Chang
 # - makeindex ./main.idx
 
  # Final run of tectonic to create output
- - tectonic “\define\iscolor{1} \input{Resume.tex}” --print
+ - tectonic “\def\iscolor{1}
+  \input{Resume.tex}" --print
  - mv Resume.pdf ResumeCOLOR.pdf
  - ls
