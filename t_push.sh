@@ -6,7 +6,8 @@ setup_git() {
 }
 
 commit_files() {
-  git add *.pdf
+  git add ResumeBLACK.pdf
+  git add ResumeCOLOR.pdf
   git commit --message "[travis skip] Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
