@@ -16,7 +16,7 @@ upload_files() {
   git status
   git remote set-url origin https://andreweggleston:${GH_TOKEN}@github.com/andreweggleston/cv.git
   git status
-  git push origin master —-quiet
+  git push —quiet origin master
 }
 
 setup_git
