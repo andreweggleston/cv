@@ -12,6 +12,7 @@ commit_files() {
 
 upload_files() {
   echo $GH_TOKEN
+  git rm origin
   git remote add origin https://andreweggleston:${GH_TOKEN}@github.com/andreweggleston/cv.git
   git push --quiet --set-upstream origin master
 }
