@@ -20,3 +20,4 @@ upload_files() {
 setup_git
 commit_files
 upload_files
+git push origin master
