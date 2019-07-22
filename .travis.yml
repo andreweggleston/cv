@@ -35,14 +35,16 @@ cache:
     - $HOME/miniconda
     - $HOME/.cache/Tectonic
 script: # Change working directory each time so including files will work. Change back so the pdfs can be found for deployment. This way, building multiple files goes well.
- - cd ./src/
+ - mkdir _build
  # Run tectonic once to generate intermediate files
- - tectonic --keep-intermediates --reruns 0 ./Resume.tex
+ - tectonic ./Resume.tex —print
+ - mv Resume.pdf ResumeBLACK.pdf
  # Only needed when using an index:
 # - tectonic --keep-intermediates ./main.tex
  # Tectonic does not include makeindex, so that needs to be done manually.
 # - makeindex ./main.idx
 
  # Final run of tectonic to create output
- - tectonic ./Resume.tex --print
- - cd ../
+ - tectonic “\define\iscolor{1} \input{Resume.tex}” --print
+ - mv Resume.pdf ResumeCOLOR.pdf
+ - ls
