@@ -14,7 +14,7 @@ upload_files() {
   echo $GH_TOKEN
   git remote rm origin
   git remote add origin https://andreweggleston:${GH_TOKEN}@github.com/andreweggleston/cv.git
-  git push --quiet --set-upstream origin master
+  git push --set-upstream origin master
 }
 
 setup_git
