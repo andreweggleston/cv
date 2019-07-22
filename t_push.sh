@@ -13,18 +13,12 @@ commit_files() {
 
 upload_files() {
   echo $GH_TOKEN
-  git remote rm origin
-  git remote add origin https://andreweggleston:${GH_TOKEN}@github.com/andreweggleston/cv.git
-  git pull
-  git push --set-upstream origin master
+  git status
+  git remote set-url origin https://andreweggleston:${GH_TOKEN}@github.com/andreweggleston/cv.git
+  git status
+  git push origin master —-quiet
 }
 
 setup_git
 commit_files
 upload_files
-echo “git status b4 second comm”
-git status
-commit_files
-echo “git starus after second comm”
-git status
-git push origin master
