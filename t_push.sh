@@ -21,5 +21,9 @@ upload_files() {
 setup_git
 commit_files
 upload_files
+echo “git status b4 second comm”
+git status
 commit_files
+echo “git starus after second comm”
+git status
 git push origin master
