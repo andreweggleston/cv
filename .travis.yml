@@ -26,7 +26,6 @@ install:
     fi
   # Install biber if required for compiling the references.
   # Biber 2.5 is required for tectonic 0.1.8
-  - conda install -c malramsay biber==2.5 --yes
   - conda info -a
   # Workaround until tectonic 0.1.11 is available
   - sudo mkdir -p ~/.config/Tectonic/
@@ -40,9 +39,6 @@ script: # Change working directory each time so including files will work. Chang
  - cd ./src/
  # Run tectonic once to generate intermediate files
  - tectonic --keep-intermediates --reruns 0 ./Resume.tex
- # If a bcf file exists run biber to compile references
- - if [ -f "main.bcf" ]; then biber main; fi
-
  # Only needed when using an index:
 # - tectonic --keep-intermediates ./main.tex
  # Tectonic does not include makeindex, so that needs to be done manually.
