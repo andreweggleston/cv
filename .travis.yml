@@ -35,7 +35,7 @@ cache:
     - $HOME/miniconda
     - $HOME/.cache/Tectonic
 script: # Change working directory each time so including files will work. Change back so the pdfs can be found for deployment. This way, building multiple files goes well.
- - mkdir _build
+ - git checkout master
  # Run tectonic once to generate intermediate files
  - tectonic ./Resume.tex --print 
  - mv Resume.pdf ResumeBLACK.pdf
@@ -49,4 +49,8 @@ script: # Change working directory each time so including files will work. Chang
  - echo “\\def\\iscolor{1}” >> temp.tex
  - tectonic ./temp.tex --print
  - mv temp.pdf ResumeCOLOR.pdf
+ - git add ResumeBLACK.pdf ResumeCOLOR.pdf
+ - git commit -m "Travis build upload [ci skip]"
+ - git remote set-url origin https://andreweggleston:${GH_TOKEN}@github.com/andreweggleston/cv.git
+ - git push origin master
  - ls
