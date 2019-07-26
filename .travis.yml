@@ -45,7 +45,7 @@ script: # Change working directory each time so including files will work. Chang
 # - makeindex ./main.idx
 
  # Final run of tectonic to create output
- - echo "\\documentsize{article}" > temp.tex
+ - echo "\\documentclass{article}" > temp.tex
  - echo "\\begin{document}" >> temp.tex
  - echo "\\def\\iscolor{1}" >> temp.tex
  - cat Resume.tex >> temp.tex
