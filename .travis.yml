@@ -45,8 +45,9 @@ script: # Change working directory each time so including files will work. Chang
 # - makeindex ./main.idx
 
  # Final run of tectonic to create output
- - echo “\\def\\iscolor{1}” > temp.tex
+ - echo “\\begin{document}\n\\def\\iscolor{1}” > temp.tex
  - cat Resume.tex >> temp.tex
+   echo "\n\end{document}" >> temp.tex
  - tectonic ./temp.tex --print
  - mv temp.pdf ResumeCOLOR.pdf
  - git add ResumeBLACK.pdf ResumeCOLOR.pdf
