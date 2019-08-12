@@ -36,22 +36,11 @@ cache:
     - $HOME/.cache/Tectonic
 script: # Change working directory each time so including files will work. Change back so the pdfs can be found for deployment. This way, building multiple files goes well.
  - git checkout master
- # Run tectonic once to generate intermediate files
+ # Run tectonic once to generate b/w resume
  - tectonic ./Resume.tex --print 
  - mv Resume.pdf ResumeBLACK.pdf
- # Only needed when using an index:
-# - tectonic --keep-intermediates ./main.tex
- # Tectonic does not include makeindex, so that needs to be done manually.
-# - makeindex ./main.idx
-
- # Final run of tectonic to create output
- - echo "\\documentclass{article}" > temp.tex
- - echo "\\begin{document}" >> temp.tex
- - echo "\\def\\iscolor{1}" >> temp.tex
- - cat Resume.tex >> temp.tex
- - echo "\\end{document}" >> temp.tex
- - tectonic ./temp.tex --print
- - mv temp.pdf ResumeCOLOR.pdf
+ - echo '\def\iscolor{1} \input{Resume.tex}' | tectonic - --print
+ - mv texput.pdf ResumeCOLOR.pdf
  - git add ResumeBLACK.pdf ResumeCOLOR.pdf
  - git commit -m "Travis build upload [ci skip]"
  - git remote set-url origin https://andreweggleston:${GH_TOKEN}@github.com/andreweggleston/cv.git
