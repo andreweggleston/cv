@@ -172,8 +172,7 @@
 \newcommand{\cvachievementnew}[3]{%
   {\large\color{emphasis}#1\par}
   \smallskip
-  \makebox[0.5\linewidth][l]{\textbf{\color{accent}#2}}%
-  {\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}\par
+  {\makebox[0.25\linewidth][l]{\faCalendar\hspace{0.5em}#3}}\par
   \medskip
 }
 
